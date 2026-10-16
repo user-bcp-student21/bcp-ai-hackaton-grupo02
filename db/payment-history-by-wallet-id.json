@@ -31,6 +31,26 @@
         "scenario": "APPROVED",
         "idem": "435b9a64-eb85-4eac-99b5-7fb1fffe883d",
         "fingerprint": "fp-0ac5d9734d689a78d65806cefb4944a744daedf9c795a0066de358c52dfb5a81"
+      },
+      {
+        "id": "payment-eb180b67-3355-4aaf-87f3-f70fb8f18802",
+        "wallet_id": "wallet-demo",
+        "recipient": "contact-demo",
+        "amount": 15000,
+        "status": "PENDING",
+        "scenario": "APPROVED",
+        "idem": "f7eb7926-6b3d-46d7-9b4f-1be526f0ecac",
+        "fingerprint": "fp-d3f965bb32024c242444c03f39db9c8321357ff7f39cb749c8b8ecda5b7f3286"
+      },
+      {
+        "id": "payment-f811b799-32fe-48a9-ae16-712cbd483814",
+        "wallet_id": "wallet-demo",
+        "recipient": "contact-demo",
+        "amount": 2200,
+        "status": "PENDING",
+        "scenario": "APPROVED",
+        "idem": "a241ffc4-5140-44de-adc4-2b501902e7d9",
+        "fingerprint": "fp-fb06bca63eadf9479346373e4183c127b31801acdfdec321cc3be03238ade195"
       }
     ]
   },

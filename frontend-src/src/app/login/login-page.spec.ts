@@ -80,8 +80,11 @@ describe('LoginPage', () => {
       password: 'test-password',
     };
     expect(login).toHaveBeenCalledWith(expectedRequest);
-    expect(fixture.nativeElement.textContent).toContain('Sesión iniciada');
+    expect(fixture.nativeElement.textContent).toContain('¡Hola! Qué bueno verte.');
+    expect(fixture.nativeElement.textContent).toContain('Wali');
     expect(fixture.nativeElement.textContent).toContain('account-001');
+    expect(fixture.nativeElement.querySelector('a[href="/payments/new"]')?.textContent).toContain('Crear pago');
+    expect(fixture.nativeElement.querySelector('a[href="/payments/history"]')?.textContent).toContain('Ver historial');
     expect(fixture.nativeElement.textContent).not.toContain('fake-access-token');
     expect(session.session()?.accountId).toBe('account-001');
   });

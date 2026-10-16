@@ -19,15 +19,22 @@
     <section class="login-panel" aria-labelledby="form-title">
       @if (authenticatedAccount(); as account) {
         <div class="authenticated-state" role="status" aria-live="polite">
-          <span class="session-mark" aria-hidden="true">✓</span>
+          <div class="wali-brand" aria-label="Wali">
+            <span class="wali-logo" aria-hidden="true">W</span>
+            <span class="wali-name">Wali</span>
+            <span class="home-tag">INICIO</span>
+          </div>
           <p class="eyebrow">ACCESO CONFIRMADO</p>
-          <h2 id="form-title">Sesión iniciada</h2>
-          <p>Tu sesión está disponible en memoria durante esta visita. El estado de wallet no forma parte de esta respuesta.</p>
+          <h2 id="form-title">¡Hola! Qué bueno verte.</h2>
+          <p>Tu cuenta está lista. ¿Qué te gustaría hacer hoy?</p>
           <dl class="account-reference">
             <dt>Cuenta</dt>
             <dd>{{ account.accountId }}</dd>
           </dl>
-          <a class="payment-link" routerLink="/payments/new">Crear pago</a>
+          <nav class="home-actions" aria-label="Acciones principales">
+            <a class="payment-link" routerLink="/payments/new">Crear pago <span aria-hidden="true">→</span></a>
+            <a class="history-link" routerLink="/payments/history">Ver historial</a>
+          </nav>
           <button class="secondary-button" type="button" (click)="logout()">Cerrar sesión</button>
         </div>
       } @else {
