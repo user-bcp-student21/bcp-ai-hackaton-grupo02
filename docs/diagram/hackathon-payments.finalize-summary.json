@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Usuario\\hack\\diagrams\\.archify\\architecture-hackathon-payments-20261016-141330\\candidate.json",
+    "sha256": "8bda0cb54e2641d97d49924662ea531eb1fbe00c72d3deecaba6470b122ddfb7",
+    "bytes": 2665
+  },
+  "artifact": {
+    "path": "C:\\Users\\Usuario\\hack\\diagrams\\.archify\\architecture-hackathon-payments-20261016-141330\\hackathon-payments.html",
+    "sha256": "e86be95fca8f187be2ac947ceaf1a504a6dc7dfefaa5b678c7cbcb52a5c6a0f9",
+    "bytes": 817737
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Usuario\\hack\\diagrams\\.archify\\architecture-hackathon-payments-20261016-141330\\hackathon-payments.finalize.json",
+    "summaryReceipt": "C:\\Users\\Usuario\\hack\\diagrams\\.archify\\architecture-hackathon-payments-20261016-141330\\hackathon-payments.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Usuario\\hack\\diagrams\\.archify\\architecture-hackathon-payments-20261016-141330\\hackathon-payments.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.1.0",
+    "availableVersion": "3.1.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-16T19:19:04.911Z",
+    "source": "network",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3907
+}

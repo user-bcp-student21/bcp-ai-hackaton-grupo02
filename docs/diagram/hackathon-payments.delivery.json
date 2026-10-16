@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "b98d4158-e57d-44d9-8451-0c68d0f11cee",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\Usuario\\hack\\diagrams\\.archify\\architecture-hackathon-payments-20261016-141330\\candidate.json",
+  "output": "C:\\Users\\Usuario\\hack\\diagrams\\.archify\\architecture-hackathon-payments-20261016-141330\\hackathon-payments.html",
+  "specification": {
+    "sha256": "8bda0cb54e2641d97d49924662ea531eb1fbe00c72d3deecaba6470b122ddfb7",
+    "bytes": 2665
+  },
+  "artifact": {
+    "sha256": "e86be95fca8f187be2ac947ceaf1a504a6dc7dfefaa5b678c7cbcb52a5c6a0f9",
+    "bytes": 817737
+  }
+}

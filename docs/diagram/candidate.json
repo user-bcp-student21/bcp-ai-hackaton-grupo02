@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Arquitectura de compra y pagos",
+    "locale": "es",
+    "output": ".archify/architecture-hackathon-payments-20261016-141330/hackathon-payments.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "participant",
+      "type": "external",
+      "label": "Usuario",
+      "sublabel": "participante del hackathon",
+      "pos": [40, 270],
+      "size": [128, 64]
+    },
+    {
+      "id": "frontend",
+      "type": "frontend",
+      "label": "Frontend",
+      "sublabel": "Angular",
+      "pos": [300, 270],
+      "size": [160, 68]
+    },
+    {
+      "id": "backend",
+      "type": "backend",
+      "label": "Backend",
+      "sublabel": "Node.js",
+      "pos": [600, 270],
+      "size": [160, 68]
+    },
+    {
+      "id": "payment_api",
+      "type": "external",
+      "label": "API de pagos",
+      "sublabel": "ej. Visa",
+      "pos": [860, 95],
+      "size": [160, 68]
+    },
+    {
+      "id": "payment_db",
+      "type": "database",
+      "label": "Servidor de BD",
+      "sublabel": "registro de pagos",
+      "pos": [860, 445],
+      "size": [160, 68]
+    }
+  ],
+  "connections": [
+    {
+      "from": "participant",
+      "to": "frontend",
+      "label": "inicia compra",
+      "variant": "emphasis"
+    },
+    {
+      "from": "frontend",
+      "to": "participant",
+      "label": "ve confirmación"
+    },
+    {
+      "from": "frontend",
+      "to": "backend",
+      "label": "POST /payments",
+      "variant": "emphasis"
+    },
+    {
+      "from": "backend",
+      "to": "frontend",
+      "label": "estado del pago"
+    },
+    {
+      "from": "backend",
+      "to": "payment_api",
+      "label": "autorizar pago",
+      "variant": "security"
+    },
+    {
+      "from": "payment_api",
+      "to": "backend",
+      "label": "aprobado/rechazado",
+      "variant": "security"
+    },
+    {
+      "from": "backend",
+      "to": "payment_db",
+      "label": "guardar registro"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Orden de la compra",
+      "items": [
+        "Angular envía la compra al backend por POST /payments.",
+        "Node.js solicita la autorización al proveedor de pagos.",
+        "El backend registra el resultado antes de devolver el estado a Angular."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Datos de pago",
+      "items": [
+        "Guarda la referencia de la transacción y su estado.",
+        "Evita almacenar el número completo de tarjeta o el CVV."
+      ]
+    }
+  ]
+}
